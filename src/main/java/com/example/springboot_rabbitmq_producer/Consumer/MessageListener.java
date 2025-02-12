@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class MessageListener
 {
     @RabbitListener(queues = MqConfig.QUEUE)
-    public void Consume (CustomMessage message)
+    public void Consume (CustomMessage message) // Receives the message send by the message publisher.
     {
         System.out.println(message);
     }
